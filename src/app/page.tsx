@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google';
 import Paragraph from '@/components/ui/Paragraph';
 
 export default function Home() {
