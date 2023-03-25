@@ -27,7 +27,8 @@ const LargeHeading = forwardRef<HTMLHeadingElement, LargeHeadingProps>(
 		return (
 			<h1
 				ref={ref}
-				{...props} className={cn(headingVariants({ size, className }))}
+				className={cn(headingVariants({ size, className }))}
+				{...props}
 			>
 				{children}
 			</h1>

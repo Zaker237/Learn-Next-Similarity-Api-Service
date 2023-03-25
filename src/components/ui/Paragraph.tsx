@@ -26,7 +26,8 @@ const Patagraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
 		return (
 			<p
 				ref={ref}
-				{...props} className={cn(paragraphVariants({ size, className }))}
+				className={cn(paragraphVariants({ size, className }))}
+				{...props}
 			>
 				{children}
 			</p>
