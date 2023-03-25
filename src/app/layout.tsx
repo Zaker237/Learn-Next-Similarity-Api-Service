@@ -15,14 +15,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn('bg:white text-slate-900 antialiased', inter.className)}
+      className={cn('bg-white text-slate-900 antialiased', inter.className)}
     >
       <body className='min-h-screen bg-slate-50 dark:bg-slate-900 antialiased'>
         <Providers>
-          {children}
-          <Toaster position='bottom-right' />
           {/* @ts-expect-error Server Component */}
           <Navbar />
+          <Toaster position='bottom-right' />
+          {children}
         </Providers>
         {/* Allow for more hight for mobile devices */}
         <div className='h-40 md:hidden' />
