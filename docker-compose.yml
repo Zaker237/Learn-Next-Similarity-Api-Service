@@ -35,6 +35,13 @@ services:
     networks:
       - app
 
+  api:
+    image: zaker237/text-similarity-server
+    networks:
+      - app
+    ports:
+    - "8002:8002"
+
 networks:
   app:
     driver: bridge
