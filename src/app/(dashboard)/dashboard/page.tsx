@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const page = async () => {
 	const user = await getServerSession(authOptions);
 	//if(!user) return notFound()
-	if(!user) return <div className='text-7xl bg-red-500'> Log in first</div>
+	if(!user) return notFound();
 	const apiKey = await db.apiKey.findFirst({
 		where: {
 			userId: user.user.id,
